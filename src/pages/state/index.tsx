@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ThemeContext } from '../../store/theme'
 
 const State: React.FC = () => {
+    const { state } = useContext(ThemeContext)
+
     return (
-        <div className="theme light">light</div>
+        <div>{state.theme}</div>
     )
 }
 
